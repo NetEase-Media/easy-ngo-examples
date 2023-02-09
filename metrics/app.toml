@@ -1,0 +1,54 @@
+[ngo.app]
+name = "metrics-demo"
+[ngo.logger]
+level = "info"
+[[ngo.client.http]]
+name = "default"
+[ngo.server.gin]
+port = 8888
+host = "0.0.0.0"
+mode = "debug"
+enabledMetric = true
+[[ngo.client.gorm]]
+name = "mysql"
+type = "mysql"
+url = "root:root@tcp(mysql:3306)/metrics_demo?charset=utf8mb4&parseTime=True&loc=Local"
+maxIdleCons = 10
+maxOpenCons = 10
+[[ngo.client.redis]]
+name = "default"
+connType = "client"
+addr = ["redis:6379"]
+[[ngo.client.kafka]]
+name = "default"
+addr = ["kafka:9092"]
+[ngo.client.kafka.consumer]
+group = "ngo"
+autoCommitInterval = 1000000000 #1s
+initialOffset = -1 # OffsetNewest=-1  OffsetOldest=-2
+sessionTimeout = 10000000000 #10s
+minFetchBytes = 1
+maxFetchBytes = 0 # 无限制
+defaultFetchBytes = 1000000
+maxFetchWait = 250000000 #250ms
+retries = 1
+[[ngo.client.memcache]]
+name = "default"
+timeout = 3000000000
+maxIdleConns = 10
+addr = ["memcached:11211"]
+[[ngo.microservices.grpc.servers]]
+name = "rpc-server-1"
+addr = ":9999"
+enableMetrics = true
+[[ngo.microservices.grpc.clients]]
+name = "rpc-client-1"
+target = "127.0.0.1:9999"
+enableMetrics = true
+[[ngo.logger.nlog]]
+Name = "xlog1"
+Level = "DEBUG"
+Flag = "Ldate | Ltime | Lmicroseconds | Lshortfile | Lmsgprefix"
+[[ngo.prometheus]]
+namespace = "ngo"
+subsystem = "app"

@@ -1,0 +1,6 @@
+[[ngo.client.redis]]
+name= "demo01"
+connType="client"
+addr=["127.0.0.1:6379"]
+password="test"
+db= 0

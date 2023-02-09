@@ -1,0 +1,42 @@
+[ngo.app]
+name = "tracer-demo"
+[ngo.logger]
+level = "info"
+[[ngo.client.http]]
+name = "default"
+enableTracer=true
+[ngo.server.gin]
+port = 8888
+host = "0.0.0.0"
+mode = "debug"
+enabledMetric = false
+enableTracer = true
+[ngo.tracer.xotel]
+endpoint = "http://jaeger:14268/api/traces"
+exporterName = "jaeger"
+samplerRatio = 1.0
+serviceName = "${ngo.app.name}-test"
+[[ngo.client.gorm]]
+name = "mysql"
+type = "mysql"
+url = "root:root@tcp(mysql:3306)/tracer_demo?charset=utf8mb4&parseTime=True&loc=Local"
+maxIdleCons = 10
+maxOpenCons = 10
+enableTracer = true
+[[ngo.client.redis]]
+name = "default"
+connType = "client"
+addr = ["redis:6379"]
+enableTracer = true
+[[ngo.client.kafka]]
+name = "default"
+addr = ["kafka:9092"]
+enableTracer = true
+[[ngo.microservices.grpc.servers]]
+name = "rpc-server-1"
+addr = ":9999"
+enableTracing = true
+[[ngo.microservices.grpc.clients]]
+name = "rpc-client-1"
+target = "127.0.0.1:9999"
+enableTracing = true

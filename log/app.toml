@@ -1,0 +1,42 @@
+[[ngo.logger.nlog]]
+    Name = "nlog1"
+    Level = "DEBUG"
+    Flag = "Ldate | Ltime | Lmicroseconds | Lshortfile | Lmsgprefix"
+[[ngo.logger.nlog]]
+    Name = "nlog2"
+    Level = "DEBUG"
+    Flag = "Ldate | Ltime | Lmicroseconds | Lshortfile | Lmsgprefix"
+[[ngo.logger.xzap]]
+    Name = "xzap1"
+    Level= "INFO"
+    NoFile = true
+    Format = "text"
+    WritableCaller = true
+    Skip = 2
+    WritableStack = false
+    Path = "./logs"
+    FileName = "esay-ngo"
+    ErrlogLevel = "ERROR"
+    ErrorPath = "./logs"
+    MaxAge = 7
+    MaxBackups = 7
+    MaxSize = 1024
+    Compress = false
+    # PackageLevel = make(map[string]string)
+[[ngo.logger.xzap]]
+    Name = "xzap2"
+    Level= "DEBUG"
+    NoFile = true
+    Format = "text"
+    WritableCaller = true
+    Skip = 2
+    WritableStack = false
+    Path = "./logs"
+    FileName = "esay-ngo"
+    ErrlogLevel = "ERROR"
+    ErrorPath = "./logs"
+    MaxAge = 7
+    MaxBackups = 7
+    MaxSize = 1024
+    Compress = false
+    # PackageLevel = make(map[string]string)

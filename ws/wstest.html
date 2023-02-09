@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            .body{text-align: center;}
+            #open{width: 120px;height: 35px;}
+            #close{width: 120px;height: 35px;}
+            #text{display: inline-block;margin: auto;margin-top: 10px;margin-bottom: 10px;width: 240px;}
+        </style>
+    </head>
+    <body class="body">
+        <button id="open">打开连接</button>
+        <button id="close">关闭连接</button>
+        <br/>
+        <input type="text" name="text" id="text" value="" />
+        <br/>
+        <button id="send">发送</button>
+        <div id="msg">
+            
+        </div>
+    </body>
+    <script>
+        var openbtn = document.getElementById("open")
+        var closebtn = document.getElementById("close")
+        var text = document.getElementById("text")
+        var send = document.getElementById("send")
+        var msg = document.getElementById("msg")
+        var websocket
+        openbtn.onclick = function(){
+            websocket = new WebSocket("ws://localhost:8080/hello")
+            websocket.onopen=function(){
+                console.log("connected");
+            }
+            websocket.onmessage = function(e){
+                console.log(e);
+                msg.innerHTML = '接收：'+e.data
+            }
+            websocket.onclose=function(e){
+                console.log("closed",e);
+            }
+        }
+        closebtn.onclick=function(){
+            websocket.close(1000,"close")
+        }
+        send.onclick=function(){
+            var msg = text.value
+            websocket.send(msg)
+        }
+    </script>
+</html>

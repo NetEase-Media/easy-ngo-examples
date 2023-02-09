@@ -1,0 +1,19 @@
+go 1.18
+
+use (
+    .
+    ./agollo
+    ./application
+    ./config
+    ./gorm
+    ./httplib
+    ./kafka
+    ./log
+    ./metrics
+    ./microservices
+    ./redis
+    ./tracing
+    ./ws
+    ./xxljob
+    ./zk
+)

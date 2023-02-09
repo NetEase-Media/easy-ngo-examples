@@ -1,0 +1,45 @@
+version: '3'
+services:
+  mysql: #服务名称（不是容器名,名称最好不要含有特殊字符，碰到过用下划线时运行出错）
+    image: mysql:5.7
+    container_name: mysql60 #容器名称
+    restart: always
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=xxl_job"
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+    networks: #加入指定网络
+      - xxl_job_net
+  xxljob:
+    image: xuxueli/xxl-job-admin:2.3.0
+    container_name: xxljob60
+    ports:
+      - "8080:8080"
+    environment:
+      PARAMS: '--spring.datasource.url=jdbc:mysql://mysql:3306/xxl_job?Unicode=true&characterEncoding=UTF-8 --spring.datasource.username=root  --spring.datasource.password=root'
+    networks:
+      - xxl_job_net
+    depends_on:
+      - mysql
+
+  demo:
+    build: 
+      context: . 
+      dockerfile: Dockerfile
+    command: ["/app/main", "-c", "/app/app.toml"]
+    ports:
+      - "9999:9999"
+    links:
+      - mysql
+      - xxljob
+    depends_on: 
+      - mysql
+      - xxljob
+    networks:
+      - xxl_job_net
+networks:
+  xxl_job_net:
+    driver: bridge

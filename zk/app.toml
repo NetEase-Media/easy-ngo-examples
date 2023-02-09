@@ -1,0 +1,4 @@
+[[ngo.client.zookeeper]]
+name = "demo01"
+addr = ["127.0.0.1:2181"]
+sessionTimeout = 5000000000 #5s

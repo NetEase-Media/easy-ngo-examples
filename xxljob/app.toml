@@ -1,0 +1,6 @@
+[ngo.client.xxxljob]
+Addr = "http://xxljob:8080/xxl-job-admin"
+#ExecutorIP = "127.0.0.1"
+ExecutorIP = "172.26.0.4"
+ExecutorPort = "9999"
+ExecutorName = "xxl-job-executor-sample"

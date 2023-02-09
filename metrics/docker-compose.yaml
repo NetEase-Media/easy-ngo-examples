@@ -1,0 +1,86 @@
+services:
+
+  prometheus:
+    image: prom/prometheus
+    user: root
+    ports:
+    - "9090:9090"
+    volumes:
+    - ./conf/prometheus:/etc/prometheus
+
+  grafana:
+    image: grafana/grafana
+    ports:
+    - "3000:3000"
+    volumes:
+    - ./data/grafana:/var/lib/grafana
+    depends_on:
+    - prometheus
+
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka:
+    image: 'bitnami/kafka:3.3'
+    links:
+      - zookeeper:zk
+    depends_on:
+      - zookeeper
+    environment:
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+  redis:
+    image: redis
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - "./setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+  memcached:
+    image: memcached
+  app:
+    build:
+      context: . 
+      dockerfile: Dockerfile
+    command: ["/app/main", "-c", "/app/app.toml"]
+    ports:
+      - "28888:8888" 
+      - "29933:19933"
+    restart: unless-stopped
+    links:
+      - redis
+      - mysql
+      - kafka
+      - prometheus
+      - grafana
+    depends_on: 
+      - redis 
+      - mysql
+      - kafka
+      - prometheus
+      - grafana
+
+#  app2:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    command: ["/app/main", "-c", "/app/app.toml"]
+#    ports:
+#    - "38888:8888"
+#    - "39933:19933"
+#    restart: unless-stopped
+#    links:
+#    - redis
+#    - mysql
+#    - kafka
+#    - prometheus
+#    - grafana
+#    depends_on:
+#    - redis
+#    - mysql
+#    - kafka
+#    - prometheus
+#    - grafana

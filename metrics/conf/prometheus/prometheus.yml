@@ -1,0 +1,16 @@
+# my global config
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'ngo'
+    static_configs:
+      - targets: ['app:19933']
+        labels:
+          app: 'ngo'
+          cluster: 'ngo-test'
+#      - targets: ['app2:19933']
+#        labels:
+#          app: 'ngo'
+#          cluster: 'ngo-test'

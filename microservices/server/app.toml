@@ -1,0 +1,20 @@
+[[ngo.microservices.grpc.servers]]
+name = "server1"
+network = "tcp"
+addr = ":8080"
+timeout = "30s"
+registrarRef = ""
+loggerRef = ""
+enableMetrics = false
+enableTracing = false
+enableLogging = false
+
+  [ngo.microservices.grpc.servers.metadata]
+  key1 = "value1"
+
+[[ngo.microservices.sd.etcds]]
+name = "etcd"
+endpoints = [ "127.0.0.1:2379" ]
+namespace = "microservices"
+ttl = "15s"
+loggerRef = ""

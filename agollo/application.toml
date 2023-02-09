@@ -1,0 +1,2 @@
+[default.config]
+addr=["apollo://localhost:8080?appId=ngo&cluster=ngo-demo&namespaceNames=namespace.json&configType=properties&propertyKey=netease"]

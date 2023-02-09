@@ -1,0 +1,36 @@
+[[ngo.client.kafka]] # 本地自行安装kafka，或者通过测试环境
+name="demo01"
+addr=["127.0.0.1:9092"]
+# version= "0.11.0.2"
+dialTimeout=5000000000 #5s
+readTimeout=5000000000 #5s
+writeTimeout=5000000000 #5s
+maxOpenRequests = 10
+#    sasl:
+#      enable: true
+#      user: xxx
+#      password: xxx
+#      mechanism: PLAIN
+#      handshake: true
+[ngo.client.kafka.metadata]
+retries = 2
+timeout = 10000000000 #10s
+[ngo.client.kafka.consumer]
+group="ngoexamplekafkaqueue"
+enableAutoCommit=false
+autoCommitInterval=1000000000 #1s
+initialOffset= -1 # OffsetNewest=-1  OffsetOldest=-2
+sessionTimeout=10000000000 #10s
+minFetchBytes=1
+maxFetchBytes= 0 # 无限制
+defaultFetchBytes = 1000000
+maxFetchWait= 250000000 #250ms
+retries=1
+[ngo.client.kafka.producer]
+maxMessageBytes=1000000
+acks= 1 # NoResponse = 0   WaitForLocal  = 1  WaitForAll = -1
+timeout= 10000000000 #10s
+retries=3
+maxFlushBytes=0
+maxFlushMessages=0
+flushFrequency= 0

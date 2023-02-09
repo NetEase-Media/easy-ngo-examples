@@ -1,0 +1,18 @@
+[[ngo.microservices.grpc.clients]]
+name = "client1"
+target = "127.0.0.1:8080"
+timeout = "30s"
+discoveryRef = ""
+balancerName = "round_robin"
+enabledHealthCheck = false
+loggerRef = ""
+enableMetrics = false
+enableTracing = false
+enableLogging = false
+
+[[ngo.microservices.sd.etcds]]
+name = "etcd"
+endpoints = [ "127.0.0.1:2379" ]
+namespace = "microservices"
+ttl = "15s"
+loggerRef = ""

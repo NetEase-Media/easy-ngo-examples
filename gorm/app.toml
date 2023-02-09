@@ -1,0 +1,17 @@
+[[ngo.client.gorm]]
+name="demo01"
+url="root:root@tcp(localhost:3306)/gorm_demo?parseTime=True&loc=Local"
+maxIdleCons=10
+maxOpenCons=100
+connMaxLifetime=1000000000000
+connMaxIdleTime=60000000000
+debug=false
+
+[[ngo.client.gorm]]
+name="demo02"
+url="root:root@tcp(localhost:3306)/gorm_demo?parseTime=True&loc=Local"
+maxIdleCons=10
+maxOpenCons=100
+connMaxLifetime=1000000000000
+connMaxIdleTime=60000000000
+debug=false
