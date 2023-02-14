@@ -1,0 +1,23 @@
+[ngo.app]
+name = "quickstart-demo"
+[ngo.server.gin]
+port = 8888
+enabledMetric = false
+[ngo.app.healthz]
+port = 10000
+
+[[ngo.client.gorm]]
+name="demo01"
+url="root:root@tcp(localhost:3306)/user_demo?parseTime=True&loc=Local"
+maxIdleCons=10
+maxOpenCons=100
+connMaxLifetime=1000000000000
+connMaxIdleTime=60000000000
+debug=false
+
+[[ngo.client.redis]]
+name= "demo01"
+connType="client"
+addr=["127.0.0.1:6379"]
+password="test"
+db= 0

@@ -16,4 +16,5 @@ use (
     ./ws
     ./xxljob
     ./zk
+    ./quickstart
 )
