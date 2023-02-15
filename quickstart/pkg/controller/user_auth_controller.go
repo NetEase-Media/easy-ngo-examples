@@ -13,6 +13,7 @@ func UserAuth(c *gin.Context) {
 	err := c.BindJSON(&p)
 	if err != nil {
 		c.JSON(http.StatusUnauthorized, vo.ResponseFailed())
+		return
 	}
 	success := service.Auth(p.Name, p.Passport)
 	if success {
