@@ -17,4 +17,5 @@ use (
     ./xxljob
     ./zk
     ./quickstart
+    ./tcp
 )

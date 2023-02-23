@@ -5,7 +5,11 @@ github.com/NetEase-Media/easy-ngo/microservices v0.0.0-20230208101755-f84181b2cd
 github.com/NetEase-Media/easy-ngo/microservices v0.0.0-20230208101755-f84181b2cdac/go.mod h1:CKolqqJ/3OsgIQRnKWWVY0pSv3A0V/sOZWNLSPwjyc4=
 github.com/NetEase-Media/easy-ngo/microservices/contrib/sd/etcd v0.0.0-20230208101755-f84181b2cdac/go.mod h1:tcPMCy4pvpo9MeT2pg7Zr32o61x09IapO6buhnufEeI=
 github.com/NetEase-Media/easy-ngo/observability v0.0.0-20230208060752-d8027e910220/go.mod h1:ISEWew7ggEuhvPVwOxPGAnIyTD/UaoB74zm8KAZjkF0=
+github.com/NetEase-Media/easy-ngo/servers/xtcp v0.0.0-20230223032101-bc4964cf1a5c h1:SynXXcik5wrcqf40Cu418bxQWrnm1ZW9AzdnI3+dKjk=
+github.com/NetEase-Media/easy-ngo/servers/xtcp v0.0.0-20230223032101-bc4964cf1a5c/go.mod h1:Z/8ZzKdMxi/A5ZbLL3EJ7MUIidpRjFVRCd5Iju9snhE=
 github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208060752-d8027e910220/go.mod h1:ya16VefBK0CUcjSkxRDWMDRVWe3ld6QJF4lXmZp/A78=
+github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230217033555-a8d2167008c1 h1:R1tFXO67EGtTGX/YTc2KKBstHlsW9vdkppCd+nyOUzk=
+github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230217033555-a8d2167008c1/go.mod h1:ya16VefBK0CUcjSkxRDWMDRVWe3ld6QJF4lXmZp/A78=
 github.com/alicebob/gopher-json v0.0.0-20200520072559-a9ecdc9d1d3a/go.mod h1:SGnFV6hVsYE877CKEZ6tDNTjaSXYUk6QqoIK6PrAtcc=
 github.com/alicebob/miniredis v2.5.0+incompatible/go.mod h1:8HZjEj4yU0dwhYHky+DxYx+6BMjkBbe5ONFIF1MXffk=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
