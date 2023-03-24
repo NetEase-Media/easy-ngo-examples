@@ -3,15 +3,15 @@ module github.com/NetEase-Media/easy-ngo-examples/microservice
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209073215-6d3384e6a75a
-	github.com/NetEase-Media/easy-ngo/microservices v0.0.0-20230208114407-1670ebb2f068
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
+	github.com/NetEase-Media/easy-ngo/microservices v1.0.0
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/observability v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208101755-f84181b2cdac // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/observability v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect

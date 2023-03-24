@@ -3,15 +3,15 @@ module github.com/NetEase-Media/easy-ngo-examples/xxljob
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209073215-6d3384e6a75a
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
 	github.com/xxl-job/xxl-job-executor-go v1.1.2
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xxxljob v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208101755-f84181b2cdac // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xxxljob v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/go-basic/ipv4 v1.0.0 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect

@@ -3,25 +3,25 @@ module github.com/NetEase-Media/easy-ngo-examples/metrics
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209073215-6d3384e6a75a
-	github.com/NetEase-Media/easy-ngo/clients/xkafka v0.0.0-20230208114407-1670ebb2f068
-	github.com/NetEase-Media/easy-ngo/microservices v0.0.0-20230208114407-1670ebb2f068
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
+	github.com/NetEase-Media/easy-ngo/clients/xkafka v1.0.0
+	github.com/NetEase-Media/easy-ngo/microservices v1.0.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/prometheus/client_golang v1.14.0
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/clients/httplib v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xgorm v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xmemcache v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xredis v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xsentinel v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/observability v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/observability/contrib/xprometheus v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/servers/xgin v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208101755-f84181b2cdac // indirect
+	github.com/NetEase-Media/easy-ngo/clients/httplib v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xgorm v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xmemcache v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xredis v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xsentinel v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/observability v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/observability/contrib/xprometheus v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/servers/xgin v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/Shopify/sarama v1.37.2 // indirect
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
 	github.com/alibaba/sentinel-golang v1.0.4 // indirect

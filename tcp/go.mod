@@ -2,13 +2,13 @@ module github.com/NetEase-Media/easy-ngo-examples/tcp
 
 go 1.18
 
-require github.com/NetEase-Media/easy-ngo/application v0.0.0-20230223060954-17d722929d8e
+require github.com/NetEase-Media/easy-ngo/application v1.0.0
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/servers/xtcp v0.0.0-20230223032101-bc4964cf1a5c // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230217033555-a8d2167008c1 // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/servers/xtcp v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/mattn/go-colorable v0.1.9 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect

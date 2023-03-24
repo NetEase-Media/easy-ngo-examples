@@ -3,18 +3,18 @@ module github.com/NetEase-Media/easy-ngo-examples/quickstart
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209095559-9112bf6b64a4
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
 	github.com/gin-gonic/gin v1.8.1
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xgorm v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/clients/xredis v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/observability v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/servers/xgin v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208101755-f84181b2cdac // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xgorm v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/clients/xredis v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/observability v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/servers/xgin v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect

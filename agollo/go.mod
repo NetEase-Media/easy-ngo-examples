@@ -3,9 +3,9 @@ module github.com/NetEase-Media/easy-ngo-examples/agollo
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209073215-6d3384e6a75a
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208114407-1670ebb2f068
-	github.com/NetEase-Media/easy-ngo/config/contrib/xagollo v0.0.0-20230208114407-1670ebb2f068
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
+	github.com/NetEase-Media/easy-ngo/config v1.0.0
+	github.com/NetEase-Media/easy-ngo/config/contrib/xagollo v1.0.0
 )
 
 require (

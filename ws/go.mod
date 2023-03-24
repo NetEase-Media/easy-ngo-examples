@@ -3,17 +3,17 @@ module github.com/NetEase-Media/easy-ngo-examples/ws
 go 1.18
 
 require (
-	github.com/NetEase-Media/easy-ngo/application v0.0.0-20230209073215-6d3384e6a75a
+	github.com/NetEase-Media/easy-ngo/application v1.0.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/gorilla/websocket v1.5.0
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/NetEase-Media/easy-ngo/config v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/observability v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/servers/xgin v0.0.0-20230208101755-f84181b2cdac // indirect
-	github.com/NetEase-Media/easy-ngo/xlog v0.0.0-20230208101755-f84181b2cdac // indirect
+	github.com/NetEase-Media/easy-ngo/config v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/observability v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/servers/xgin v1.0.0 // indirect
+	github.com/NetEase-Media/easy-ngo/xlog v1.0.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/fatih/color v1.13.0 // indirect
